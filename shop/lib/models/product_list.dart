@@ -38,7 +38,7 @@ class ProductList with ChangeNotifier {
     );
 
     Map<String, dynamic> favData =
-        favResponse.body.isEmpty ? {} : jsonDecode(favResponse.body);
+        favResponse.body == 'null' ? {} : jsonDecode(favResponse.body);
 
     Map<String, dynamic> data = jsonDecode(response.body);
     data.forEach((productId, productData) {
