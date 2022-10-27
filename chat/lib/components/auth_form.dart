@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:chat/components/user_image_picker.dart';
-import 'package:chat/core/models/auth_form_data.dart';
+import 'package:chat/cores/models/auth_form_data.dart';
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {
@@ -13,7 +13,7 @@ class AuthForm extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AuthFormState createState() => _AuthFormState();
+  State<AuthForm> createState() => _AuthFormState();
 }
 
 class _AuthFormState extends State<AuthForm> {
@@ -60,10 +60,10 @@ class _AuthFormState extends State<AuthForm> {
                 ),
               if (_formData.isSignup)
                 TextFormField(
-                  key: ValueKey('name'),
+                  key: const ValueKey('name'),
                   initialValue: _formData.name,
                   onChanged: (name) => _formData.name = name,
-                  decoration: InputDecoration(labelText: 'Nome'),
+                  decoration: const InputDecoration(labelText: 'Nome'),
                   validator: (_name) {
                     final name = _name ?? '';
                     if (name.trim().length < 5) {
@@ -73,10 +73,10 @@ class _AuthFormState extends State<AuthForm> {
                   },
                 ),
               TextFormField(
-                key: ValueKey('email'),
+                key: const ValueKey('email'),
                 initialValue: _formData.email,
                 onChanged: (email) => _formData.email = email,
-                decoration: InputDecoration(labelText: 'E-mail'),
+                decoration: const InputDecoration(labelText: 'Email'),
                 validator: (_email) {
                   final email = _email ?? '';
                   if (!email.contains('@')) {
@@ -86,11 +86,11 @@ class _AuthFormState extends State<AuthForm> {
                 },
               ),
               TextFormField(
-                key: ValueKey('password'),
+                key: const ValueKey('password'),
                 initialValue: _formData.password,
                 onChanged: (password) => _formData.password = password,
                 obscureText: true,
-                decoration: InputDecoration(labelText: 'Senha'),
+                decoration: const InputDecoration(labelText: 'Senha'),
                 validator: (_password) {
                   final password = _password ?? '';
                   if (password.length < 6) {
@@ -99,7 +99,7 @@ class _AuthFormState extends State<AuthForm> {
                   return null;
                 },
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               ElevatedButton(
                 onPressed: _submit,
                 child: Text(_formData.isLogin ? 'Entrar' : 'Cadastrar'),
