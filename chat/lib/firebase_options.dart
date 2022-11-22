@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '17017991372',
     projectId: 'chat-69bbb',
     storageBucket: 'chat-69bbb.appspot.com',
-    iosClientId: '17017991372-4ittogc585mcipmkbdb06lqtli0d2ufq.apps.googleusercontent.com',
+    iosClientId:
+        '17017991372-4ittogc585mcipmkbdb06lqtli0d2ufq.apps.googleusercontent.com',
     iosBundleId: 'com.example.chat',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '17017991372',
     projectId: 'chat-69bbb',
     storageBucket: 'chat-69bbb.appspot.com',
-    iosClientId: '17017991372-4ittogc585mcipmkbdb06lqtli0d2ufq.apps.googleusercontent.com',
+    iosClientId:
+        '17017991372-4ittogc585mcipmkbdb06lqtli0d2ufq.apps.googleusercontent.com',
     iosBundleId: 'com.example.chat',
   );
 }
